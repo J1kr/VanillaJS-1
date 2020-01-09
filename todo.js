@@ -41,12 +41,9 @@ function loadToDos(){
     const loadedToDos = localStorage.getItem(TODOS_LS);
     if(loadedToDos !== null){
         const parsedTodOs = JSON.parse(loadedToDos);
-        console.log(loadedToDos);
-        console.log(parsedTodOs);
-
         parsedTodOs.forEach(function(toDo){
-            console.log(toDo.text);
-        })
+            paintToDo(toDo.text);
+        });
 
         }
     } 
